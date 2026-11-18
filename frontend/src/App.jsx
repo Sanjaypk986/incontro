@@ -1,8 +1,14 @@
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import theme from "./theme/theme";
+import { RouterProvider } from "react-router-dom";
+import router from "./routes/router";
+
 function App() {
   return (
-    <div>
-      <h1>Incontro</h1>
-    </div>
+   <ThemeProvider theme={theme}>
+    <CssBaseline/>
+    <RouterProvider router={router} />
+   </ThemeProvider>
   );
 }
 
